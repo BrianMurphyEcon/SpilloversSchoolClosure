@@ -1,0 +1,36 @@
+\section*{Empirical Strategy}
+
+We study the effect of receiving displaced students from nearby school closures on incumbent student outcomes in receiving schools. Specifically, we focus on grade-level inflows, as displaced students often integrate into specific grades rather than uniformly across the school.
+
+Let $Y_{igst}$ denote the outcome of student $i$ in grade $g$, school $s$, and year $t$. Let $Z_{gst}$ represent the intensity of displaced student inflow into grade $g$ of school $s$ in year $t$ (e.g., the share of students entering from a closed school). We estimate the following difference-in-differences model:
+
+\begin{equation}
+Y_{igst} = \beta Z_{gst} + \lambda_{gs} + \gamma_t + X_{it}'\theta + \varepsilon_{igst}
+\end{equation}
+
+where $\lambda_{gs}$ are grade-by-school fixed effects, $\gamma_t$ are year fixed effects, and $X_{it}$ is a vector of student-level covariates. The coefficient $\beta$ captures the spillover effect of displaced students on incumbent students' outcomes.
+
+To test for pre-trends and dynamic effects, we also estimate an event-study specification centered around the closure year:
+
+\begin{equation}
+Y_{igst} = \sum_{\tau \neq -1} \beta_\tau \cdot 1[t - t_{\text{closure}} = \tau] + \lambda_{gs} + \gamma_t + X_{it}'\theta + \varepsilon_{igst}
+\end{equation}
+
+Here, $1[t - t_{\text{closure}} = \tau]$ is an indicator for being $\tau$ years relative to the year of closure. We omit $\tau = -1$ to serve as the reference period.
+
+One potential concern is that teacher quality will change as a result. As a new school receives a large inflow of new students, they will need to hire additional teachers to support the new needs of the school. Therefore, changes to student quality might also be a function of teacher quality changes. To address these concerns, we estimate:
+
+\begin{equation}
+Y_{igst} = \beta Z_{gst} + \delta TQ_{gst} + \lambda_{gs} + \gamma_t + X_{it}'\theta + \varepsilon_{igst}
+\end{equation}
+
+where $TQ_{gst}$ is a measure of average teacher quality, measured through value added in grade $g$, school $s$, year $t$. A substantial change in $\beta$ relative to Equation (1) would suggest that teacher quality mediates the peer spillover effect.
+
+Finally, one other concern is that a large inflow might affect the current teacher retention rate. Thus, we estimate:
+
+\begin{equation}
+T_{st+1} = \beta Z_{st} + \lambda_s + \gamma_t + \varepsilon_{st}
+\end{equation}
+
+where $T_{st+1}$ denotes teacher quality or turnover in school $s$ in year $t+1$, and $Z_{st}$ is the intensity of displaced student inflow in year $t$. The coefficient $\beta$ captures whether closure-induced inflows affect the teacher labor market in receiving schools.
+

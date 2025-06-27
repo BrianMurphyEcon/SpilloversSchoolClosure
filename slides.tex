@@ -1,0 +1,1069 @@
+\documentclass[aspectratio=169,xcolor=dvipsnames]{beamer}
+
+\usepackage{subcaption} 	% needed when figures side by side\documentclass[aspectratio=169,xcolor=dvipsnames]{beamer}
+
+\usepackage{subcaption} 	% needed when figures side by side
+\usepackage{hyperref}
+\usepackage{caption} 		% needed by subcaption and notes under figures
+\usepackage{subcaption} 	% needed when figures side by side
+\usepackage{booktabs} % unusual formatting of tables
+\usepackage{amssymb,amsmath}    % For equations
+\usepackage{appendixnumberbeamer}
+\usepackage{colortbl} % colored lines in tables
+\usepackage{multirow}
+\usepackage{tabularx}% http://ctan.org/pkg/tabularx
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+\usepackage{tikz}
+\usetikzlibrary{matrix,shapes,arrows,fit,tikzmark}
+\newcolumntype{.}{D{.}{.}{-1}}
+
+\tikzset{
+        every picture/.style={remember picture,baseline},
+        every node/.style={anchor=base,align=center,outer sep=1.5pt},
+        every path/.style={thick},
+        }
+\input{fragment/preamble_estout.tex}
+
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+
+%\usetheme[progressbar=frametitle]{metropolis}
+%\usepackage{appendixnumberbeamer}
+
+%\usepackage{booktabs}
+%\usepackage[scale=2]{ccicons}
+
+%\usepackage{xspace}
+%\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+
+%\usepackage[english]{babel}
+%\usepackage[utf8x]{inputenc}
+
+%\setbeamertemplate{frame numbering}[fraction]
+%\useoutertheme{metropolis}
+%\useinnertheme{metropolis}
+%\usefonttheme{metropolis}
+%\usecolortheme{spruce}
+%\setbeamercolor{background canvas}{bg=white}
+%\definecolor{mycolor}{rgb}{.07,.04,.56}
+% \usecolortheme[named=mycolor]{structure} % or try albatross,
+
+%\setbeamertemplate{frametitle}{\color{black}\bfseries\insertframetitle\par\vskip-6pt\hrulefill}
+  
+\mode<presentation>
+{
+  \usetheme{Madrid}  % or try Darmstadt, Madrid, Warsaw, ...
+  \definecolor{mycolor}{rgb}{.06,.2,.65}
+  \usecolortheme[named=mycolor]{structure} % or try albatross, beaver, crane, ...
+  \usefonttheme{default}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+} 
+  
+\setbeamersize{text margin left=5mm,text margin right=5mm}
+
+\newenvironment{wideitemize}{\itemize\addtolength{\itemsep}{10pt}}{\enditemize}
+\title[Background and Literature]{Neighborhood Impacts on College STEM Choice}
+\author{\textbf{Jeonghyeok Kim}}
+\institute{University of Houston}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+%-----------------------------------------------------------------------------------%
+
+% Uncomment these lines for an automatically generated outline.
+
+\section{Introduction}\label{intro}
+% \begin{frame}{Neighborhood effects}
+
+% \begin{wideitemize}
+%   \item Social scientists have long hypothesized that place of living directly affects the outcomes. 
+  
+%   \item Descriptive research has supported this idea by showing that individuals living in high-poverty areas fare worse both contemporaneously and over the long-run in terms of important outcomes such as education, criminal involvement, health, and earnings (Wilson 1987; Jencks and Mayer 1990; Brooks-Gunn et al. 1993; Sampson, Morenoff, and Gannon-Rowley 2002; Sharkey and Faber 2014)
+  
+%   \item Subsequent generation of neighborhood-effects studies have addressed selection bias by relying on randomized field experiments and on quasi-experimental sources of variation.
+
+% \end{wideitemize}
+% \end{frame}
+
+% \begin{frame}{Recent Literature on Neighborhood Effects}
+% %\textcolor{Blue}{\textbf{Disruption Vs Better environments}}
+% \begin{wideitemize}
+%   \item Randomized field experiments
+%   \begin{itemize}
+%       \item[-] US Department of Housing and Urban Development’s Moving to Opportunity randomized housing mobility demonstration. A treatment group of public housing families move to lower-poverty areas by providing them with housing vouchers and mobility counseling.
+%       \item[-] Older children and mixed evidence (Kling, Liebman, and Katz 2007). Younger children positive effects on earnings and education (Chetty, Hendren, and Katz 2016).
+%   \end{itemize}
+%   \item \textbf{Moving across commuting zones (Chetty and Hendren 2018)}
+%   \begin{itemize}
+%       \item[-] Comparing outcomes for children whose families moved when they were different ages to understand how effects vary with the duration of time spent living in more-advantaged areas (eg., moving at age 9 vs 10).
+%       \item[-] The adult incomes of children who moved converge to the adult incomes of children of permanent residents in the destination at a rate of 4 percent per year of childhood exposure.
+%   \end{itemize}
+  
+% \end{wideitemize}
+% \end{frame}
+
+% \begin{frame}{College Major Choice and STEM}
+% %\textcolor{Blue}{\textbf{Disruption Vs Better environments}}
+% \begin{wideitemize}
+%   \item College major choice and its relationship with labor market outcomes has long been a topic of study for social scientists. For college graduates, major choice is often directly related to occupation choices. A number of studies have demonstrated that the choice of post-secondary field is a key determinant of future earnings, and that the demographic composition of college major choice may be a key factor in explaining
+% earnings differences across demographic groups, such as by gender.
+%     \item Multiple aspects has been studied: expected earnings and human capital investments and role for non-pecuniary considerations (work-family balance, parental approval, marriage market considerations).
+%     \item Certain majors are of special interest. While STEM become pivotal in the US economy, the supply of STEM workers cannot keep up with industry demand. In addition, the representation of different races and genders in STEM fields is imbalanced. To address this concern, the National Science Foundation has allocated over \$1.5 billion towards enhancing the involvement of minorities in the sciences.
+  
+% \end{wideitemize}
+% \end{frame}
+
+% When Mencius was just a little boy, his father died. Mencius’ mother, Zhǎng, had to raise Mencius all alone and they were very poor. At first, Mencius and his mother lived near a cemetery. Over time, Zhǎng noticed that her little boy was imitating the funeral directors and mourners. Even worse, he and his friends were playing with the offerings left at the graves. Determined to find a more wholesome environment for her son, Zhǎng moved near a busy marketplace. Once again, young Mencius began imitating the adults around him. He imitated the loud sales pitches of the merchants and made clay pigs to “butcher.” Again, Zhǎng set out to find a better place to raise her son. Their next home was near a school. This time, young Mencius imitated the students and teachers working hard at their studies and carrying out scholarly rituals. Finally, Zhǎng knew that she had found a proper neighborhood for her son. They were home. He grew up to be one of the most respected thinkers in the history of the world. 
+% -Mencius’ Mother, Three Moves (孟母三遷).
+% https://ruistassociation.org/mencius-mother-three-moves/
+
+\begin{frame}{Introduction}
+
+\begin{wideitemize}
+  \item How much do neighborhood environments affect children’s outcomes?
+    \begin{itemize}
+        \item Observational studies document substantial variation in outcomes across areas \begin{scriptsize} \textcolor{lightgray}{[Wilson 1987, Massey and Denton 1993, Cutler and Glaeser 1997, Wodtke et al. 1999, Altonji and Mansfield 2014]}\end{scriptsize}
+        \item Studies using randomized field experiments and quasi-experimental situations show that growing up in a \textit{better neighborhood} has positive effects on adulthood outcomes \begin{scriptsize} \textcolor{lightgray}{[Kling, Liebman, and Katz 2007, Chetty, Hendren, and Katz 2016, Chetty and Hendren 2018]}\end{scriptsize}
+    \end{itemize}
+    \item How do students choose the field of study in college?
+    \begin{itemize}
+        \item Multiple aspects studied: expected earnings, human capital investments, and the role of non-pecuniary considerations (work-family balance, parental approval, marriage market considerations) \begin{scriptsize} \textcolor{lightgray}{[Willis and Rosen 1979, Altonji 2012, 2016, Zafar, 2013, Wiswall and Zafar 2019]}\end{scriptsize}
+        \item Certain majors are of special interest. As STEM has become pivotal in the US economy, people are concerned about the shortage of supply of STEM workers, and demographic imbalances. \begin{scriptsize} \textcolor{lightgray}{[Stinebrickner 2014, Arcidiacono, Aucejo, and Hotz 2016, Deming and Noray 2020]}\end{scriptsize}
+    \end{itemize}
+\end{wideitemize}
+\end{frame}
+
+\begin{frame}{This Paper}
+\begin{wideitemize}
+  \item We estimate neighborhood effects on \textit{STEM choices} by using students in Texas who move across school districts (or counties). 
+  %\textbf{If students move to school A, do they become similar to the original students in school A?}
+  \pause
+  
+  \begin{wideitemize}
+  % \item Not a lower bound but an estimator for neighborhood effects
+  % \begin{itemize}
+  %     \item[-] "Counties are much larger than the typical geographic units used to define “neighborhoods”; however, the variance of place effects across the broad geographies we study is a lower bound..."
+  %     \item[-] The Level of location is closer to neighborhoods the students interact with.
+  % \end{itemize}
+  % \pause
+  \item Capturing multidimensionality of neighborhood effects. 
+  \begin{itemize}
+      \item[-] Moving from better-worse neighborhoods comparison to the characteristics of neighborhoods
+  \end{itemize}
+  \pause
+  \item Finding neighborhoods effects on college major choice
+  \begin{itemize}
+      \item[-] Highlighting contextual factors rather than traditional cost-benefit perspective
+      \item[-] Emphasizing the importance of neighborhoods in the gaps in STEM choice
+  \end{itemize}
+\end{wideitemize}
+
+\end{wideitemize}
+\end{frame}
+
+% \begin{frame}{Neighborhood Effects}
+% \begin{wideitemize}
+% \item We define neighborhood effects as a sum of all effects students get in the place except innate abilities and family influence
+% \item How neighborhood affects students
+% \begin{itemize}
+%     \item School environments: well-resourced schools, effective teachers, and high-achieving peers.
+%     \item Non-s
+% \end{itemize}
+% \item Texas Higher Education Coordinating Board 
+% \begin{itemize}
+%     \item All public and most private post-secondary education data in Texas.
+% \end{itemize}
+% \item Texas Workforce Commission
+% \begin{itemize}
+%     \item Employment and earnings for workers covered by the Unemployment Insurance from TWC. 
+% \end{itemize}
+%     \end{wideitemize}
+% \end{frame}
+
+\section{Data}
+\begin{frame}{Texas Administrative Data}
+I use Texas Administrative Data using the following sources:
+\begin{wideitemize}
+\item Texas Education Agency
+\begin{itemize}
+    \item K-12 education data in public schools starting from the academic years 1994-1995 
+    \item Tracking the neighborhoods of students
+\end{itemize}
+\item Texas Higher Education Coordinating Board 
+\begin{itemize}
+    \item All public and most private post-secondary education data in Texas.
+    \item Constructing the exposure measure using STEM rates
+\end{itemize}
+\item Texas Workforce Commission
+\begin{itemize}
+    \item Employment and earnings for workers covered by the Unemployment Insurance from TWC. 
+    \item Constructing control variables
+\end{itemize}
+    \end{wideitemize}
+\end{frame}
+
+\begin{frame}{Sample Construction and Variable Definition}\label{}
+
+\begin{wideitemize}
+    \item We use school cohorts who started kindergarten from 1994 to 2003
+    \item Among these, students are divided into two groups:
+    \begin{itemize}
+        \item Non-movers: students who never move to another school district in their school years
+        \item Movers: students who move across school districts. The moving once is the baseline group (not using multiple movers).
+    \end{itemize}
+    \item We define a school district as a neighborhood. Small school districts are excluded.
+    \item Defining STEM choice: attaining a BA degree in STEM majors following the definition of DHS 2016.
+    % \begin{itemize}
+    %     \item STEM exposure measure: average STEM rate of non-movers in school districts
+    % \end{itemize}
+\end{wideitemize}
+\end{frame}
+
+% \begin{frame}{Sources of Neighborhood Characteristics (for STEM)}\label{data2}
+% \begin{wideitemize}
+%     \item \textbf{School (or district) level graduation cohort characteristics---9000 (1000) schools}
+%     \item County-level 6-digit industry composition from wage data in ERC---154 counties 
+%     \item Census tract level 2-digit industry composition from LODES data---5000 Census tracts
+%     \item Metropolitan and Nonmetropolitan Area occupations from Occupational Employment and Wage Statistics (OEWS)---30 areas 
+%     \item Patent data
+% \end{wideitemize}
+    
+% \end{frame}
+
+\section{Empirical Frameworks}
+
+\begin{frame}{STEM Rates Across School District}\label{}
+Begin with a descriptive characterization of non-movers’ STEM rates in each school district \vspace{-0.2cm}
+    \begin{figure}[H]
+    \centering \onslide<1->
+	\begin{subfigure}[t]{0.45\textwidth}
+        % Sub-caption
+        \centering
+    		\caption{STEM rate ($\frac{\text{STEM}}{\text{All students}}$)}
+    		\includegraphics[width=0.9\linewidth]{fig/map_stem.png}
+	\end{subfigure}% 
+        \onslide<2->
+	\begin{subfigure}[t]{0.45\textwidth}
+	    % Sub-caption
+	    \centering
+    		\caption{STEM rate among the BAs ($\frac{\text{STEM}}{\text{All BAs}}$)}
+    		\includegraphics[width=0.9\linewidth]{fig/map_stemOverBA.png}
+	\end{subfigure}
+	\par\smallskip
+    \end{figure}
+\onslide<1->Top 5 districts are near NASA (Friendswood, Clear Creek) or Austin (Eanes, Lake Travis, Round Rock). \onslide<2->Correlation: 0.66
+\end{frame}
+
+\begin{frame}{STEM Rate is Highly Persistent over Time Across School District}\label{}
+    \begin{figure}[H]
+    \centering
+	\begin{subfigure}[t]{0.45\textwidth}
+        % Sub-caption
+        \centering
+    		\caption{STEM rate ($\frac{\text{STEM BAs}}{\text{All students}}$)}
+    		\includegraphics[width=0.9\linewidth]{fig/districtCompSTEM19942001.png}
+	\end{subfigure}% 
+        \pause
+	\begin{subfigure}[t]{0.45\textwidth}
+	    % Sub-caption
+	    \centering
+    		\caption{STEM rate among the BAs ($\frac{\text{STEM BAs}}{\text{All BAs}}$)}
+    		\includegraphics[width=0.9\linewidth]{fig/districtCompSTEMofBA19942001.png}
+	\end{subfigure}
+	\par\smallskip
+    \end{figure}
+    There is persistence in the rate of majoring in STEM over time across regions, even among college graduates.
+\end{frame}
+
+\begin{frame}{Neighborhood Exposure Effects}
+    \begin{wideitemize}
+        \item We identify causal effects of neighborhoods by analyzing exposure effects
+        \item Think of an experiment randomly assigning a group of students across new places $p$ at grade $m$ for the rest of their school years. 
+        \item Regress STEM choice $STEM_i$ of these students on non-moving students’ STEM choice in school district $p$ ($\overbar{STEM}_p$)
+        \begin{equation}
+        STEM_i = \alpha + \beta_m\overbar{STEM}_p + \theta_i.
+        \end{equation}
+        \item  Define exposure effects at grade $m$ as 
+    $$\gamma_m =  \beta_{m+1} - \beta_{m}.$$
+    \end{wideitemize}
+\end{frame}
+
+\begin{frame}{Estimating Exposure Effects in Observational Data}
+\begin{wideitemize}
+    \item We estimate exposure effects by studying students moving across school districts at different grades in observational data
+    \item The choice of a neighborhood could be correlated with students’ future STEM choice
+    \begin{itemize}
+        \item ex. parents who move to a high STEM area may have latent ability or wealth ($\theta_i$) that produces better child outcomes
+    \end{itemize}
+    \item Estimating it in an observational sample yields a regression coefficient
+    \begin{equation}
+        b_m = \beta_m + \delta_m
+    \end{equation}
+    where $\delta_m$ = $\frac{cov(\theta_i, \overbar{STEM}_p)}{var(\overbar{STEM}_p)}$ is a selection effect.
+\end{wideitemize}
+\end{frame}
+
+\begin{frame}{Estimating Exposure Effects in Observational Data, Cont'd}
+\begin{wideitemize}
+    \item But identification of exposure effects does not require that where people move is orthogonal to students’ future STEM choices
+    \item Even if where to move correlates with STEM choices, we can estimate the effects by taking advantage of timing of move.
+    %Instead, requires that timing of move to higher versus lower rate areas is orthogonal to students’ potential outcomes.
+    Assumption: $\delta_m = \delta$  for all m.
+    \item Under this assumption, $$\gamma_m = \beta_{m+1} - \beta_{m} = b_{m+1} - b_{m}.$$
+    \item Possible that this assumption could be violated
+    \begin{itemize}
+        \item Ex: parents who move to better areas when kids are young may have better unobservables
+        \item First present baseline estimates and then evaluate this assumption in detail
+    \end{itemize}
+\end{wideitemize}
+ 
+\end{frame}
+
+\begin{frame}{Estimating Exposure Effects in Observational Data, Cont'd}
+    We estimate the following equation for students moving from origin $o$ to destination $d$ in grade $m$ in birth cohort $s$:
+    \begin{equation}
+        STEM_i = \alpha_{osm} +  \sum_{m=1}^{12} b_mI(m_i=m) \Delta STEM_{od} + \eta X_{d} + \epsilon_{2i}
+    \end{equation}
+    \begin{itemize}
+        \item $STEM_i$: an indicator for whether the student $i$ chooses STEM majors
+        \item $\Delta STEM_{od} = \overbar{STEM}_d -  \overbar{STEM}_o$: difference in STEM rates between destination and origin of non-movers.
+        \item $\alpha_{osm}$: origin-by-school cohort-by-grade at move fixed effects
+        \item $X_{d}$: a control vector including the BA rate of the destination.
+    \end{itemize}
+\end{frame}
+
+% \begin{frame}{\normal Mover's Outcomes Versus Predicted Outcomes Based on Permanent Residents in Destination}
+% Nonparametric binned scatter plot corresponding to the regression for students moving at grade m = 3. 
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.35\linewidth]{fig/moverOutcomesVersusPredictedOutcomes.png}
+%     \par\smallskip
+% \end{figure}
+% \begin{itemize}
+%     \item Moving to areas where permanent residents major in STEM more (or less) $\rightarrow$ more (or less) likely to major in STEM
+%     \item But $b_m = \beta_m + \delta_m$, need to recover $\gamma_m$ by using estimates of $b_m$ for all $m$.
+% \end{itemize}
+
+
+% \end{frame}
+
+
+% \begin{frame}{Applying Empirical Approach to Study STEM Majors}
+%     Building on this approach, we estimate analogous regression coefficients $b_m$ for children who move at each grade m from 1 to 12:
+%     \begin{equation}
+%         y_i = \sum_{m=1}^{12} b_mI(m_i=m)\Delta_{od} + \gamma_1\Delta_{od} + \gamma_2 BA_{d} + \tau_m + \kappa_{os} + \epsilon_{2i}  
+%     \end{equation}
+%     where $\tau_m$ is age at move fixed effects, $\kappa_{os}$ is origin-by-birth cohort fixed effects, and $BA_{d}$ is BA rate of the destination.
+% \end{frame}
+
+\begin{frame}{Exposure Effects in STEM Major Choice}\label{semi-para}
+ 
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.5\linewidth]{fig/Semipara_STEM_lfit.png}
+%     \par\smallskip
+% \end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{fig/Semipara_STEM_lfit.png}
+    \end{figure}
+estimates of $b_m$ decline steadily with the grade at move. Implying that the exposure effect $\gamma_m = b_{m+1} - b_{m}$ is approximately constant
+\hyperlink{symmetry}{\beamerbutton{Symmetry}} 
+\hyperlink{county}{\beamerbutton{County}} 
+\hyperlink{para}{\beamerbutton{Parametric}}
+\end{frame}
+
+\begin{frame}{Linear Specification}\label{}
+%Let $i$ index children. In the sample of one-time let $m_i$ denote the age at which child $i$ moves from origin CZ $o$ to destination CZ $d$. Let $\Bar{p}_d$ and $\Bar{p}_o$ denote the STEM rates in the destination and origin regions and $\Delta_{od} = \Bar{p}_d -  \Bar{p}_o$ denote the difference in STEM rates in the destination versus origin regions. After computing these variables, 
+I regress an indicator for whether a student $i$ chooses STEM majors ($STEM_i$) on the measures of origin ($o$) and destination ($d$) STEM major rates ($\overbar{STEM}$) interacted with the student’s age at move ($m_i$): 
+\begin{equation}\label{eq:}
+	  STEM_i =  \alpha_{osm} + \gamma m_i \Delta STEM_{od} + \theta \Delta STEM_{od} + \eta X_{d} + \epsilon_{3i}
+    \end{equation}
+\begin{itemize}
+    \item $\Delta STEM_{od} = \overbar{STEM}_d -  \overbar{STEM}_o$ : difference in STEM rates in the destination versus origin regions
+    \item $\alpha_{osm}$: origin STEM rate-by-grade at move-by-birth cohort, and $\theta_2$: controls including BA rate of the origin and destination.
+    %\item $\beta$: When students move from one place to another with a 1\% higher rate of STEM majors and the same BA rate one year later than other moved students, a child's propensity to major in STEM changes. What's the unit?
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exposure Effects in STEM Major Choice: Linear}\label{tab_main}
+    \begin{table}[!htbp]
+	\centering \footnotesize
+	%\resizebox{0.95\textwidth}{!}{  % just to show it can be used}
+		\estwide{"tab/Tab_STEM_diffSpec.tex"}{5}{c}
+	\captionsetup{width=1.0\textwidth}	
+\end{table}
+\vspace{-0.2cm}
+\begin{itemize}
+    \item The estimates are similar across different specifications. Due to the large number of dummies, we will use the more efficient specification (1) in the following estimations.
+     \hyperlink{enrol_cutoff}{\beamerbutton{Enrollment cutoffs}} 
+    %\item Interpretation: moving in kindergarten from 25th percentile (0.0259) to 75th percentile (0.0539) of STEM rate-1.24 SD-would increase probability of majoring in STEM by 0.0280*4.0*13=1.4196 percentage points (35\% of the mean).
+    
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Identification Assumption}\label{}
+\begin{wideitemize}
+    \item Identification assumption: the potential outcomes of students moving to higher versus lower STEM areas do not vary with the grade at move.
+    \item[-] This could be violated for several reasons. ex, families moving to higher areas when children are young may invest more in their children in other ways
+    \begin{itemize}
+        \item Identifying moves that occur as part of large outflows from the same place, often caused by natural disasters or local plant closures.   
+        \item Set of placebo (overidentification) tests: exploiting heterogeneity in permanent residents’ outcomes across subgroups (school cohorts, demographic groups).
+        \begin{itemize}
+            \item[$\rightarrow$] If it is selection, it is hard to observe group specific convergence.
+        \end{itemize}
+    \end{itemize}
+    \pause
+    \item Another concern: the estimation might be influenced by the overall educational achievement rather than the STEM rate, even when controlling for BA rates.
+    \begin{itemize}
+        \item Placebo test: exploiting heterogeneity in permanent residents’ outcomes across majors.
+        \begin{itemize}
+            \item[$\rightarrow$] If it is selection, it is hard to observe major specific convergence.
+        \end{itemize}
+    \end{itemize}
+\end{wideitemize}    
+\end{frame}
+
+% \begin{frame}{General Educational Achievement or STEM Specific Exposure}\label{}
+%     \begin{itemize}
+%         \item Another concern is that the estimation might be influenced by the overall educational achievement of the place rather than the STEM rate, even when controlling for BA rates.
+%         \item If it is driven by general educational achievement, major choice ($k_i$) should be responsive to other major exposure effects ($\gamma_k'$) too
+        
+%         \item Key assumption: if general educational effects $\theta_i$ correlated with exposure effect for major $k$, then correlated with exposure effects for other majors $k'$ as well
+%         $$Cov(\theta_i, m\Delta_{od,k(i)}|X)>0 \Rightarrow Cov(\theta_i,m\Delta_{od,k'}|X, m\Delta_{od,k(i)})>0$$
+%         \item Under this assumption, selection effects will be manifested in correlation with place effects for other majors
+%     \end{itemize}
+% \end{frame}
+
+% \begin{frame}{Concerns}\label{}
+% \begin{wideitemize}
+%     \item What do previous cohorts' characteristics measure? 
+%     \begin{itemize}
+%         \item Cohorts' characteristics are outcomes of comprehensive effects of individual, family, and neighborhood characteristics. 
+%         \item We argue this is a measure of comprehensive neighborhood characteristics.
+%         \item We will connect the characteristics to more tangible traits such as industry or occupation composition.
+%     \end{itemize}
+
+%     \item Parents' income
+%     \begin{itemize}
+%         \item Chetty and Hendren (2018) proceed it given parents' income
+%         \item Instead of using parents' income, we use students' performance measures in 3rd grade.
+%     \end{itemize}
+    
+% \end{wideitemize}    
+% \end{frame}
+
+\begin{frame}{Exposure Effects Estimates Using Displacement Shocks}
+\begin{wideitemize}
+    \item If displacement shocks do not have direct exposure effects on children that are correlated with $\Delta_{od}$, then the assumption is satisfied. 
+    \item By isolating a subset of moves caused by known exogenous shocks, we can more credibly ensure that changes in students’ outcomes are not driven by unobservable factors.
+    \item Identify displacement shocks based on population outflows at the school district level. Let $K_{dt}$ denote the number of students who leave school district $d$ in year $t$ in the sample of one-time movers and $\bar{K}_d$ mean outflows over the years. We define the shock to outflows in year $t$ in school district $d$ as 
+    $$k_{dt} = K_{dt}/\bar{K}_d$$
+\end{wideitemize}
+
+\end{frame}
+
+\begin{frame}{Exposure Effects Estimates Using Displacement Shocks}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{fig/DisplacementShock_district.png}
+    \par\smallskip
+\end{figure}
+X-axis: percentile [$k_{dt}$]
+\end{frame}
+
+\begin{frame}{Outcome-Based Placebo Tests}\label{}
+    \begin{wideitemize}
+        \item General idea: exploit heterogeneity in place effects across subgroups to obtain overidentification tests of exposure effect model
+        \item Start with variation in place effects across school cohorts
+        \begin{itemize}
+            \item Some areas are getting better over time, others are getting worse
+            \item Causal effect of neighborhood on a child who moves in to an area should depend on properties of that area while he is growing up
+        \end{itemize}
+    \end{wideitemize}
+\end{frame}
+
+\begin{frame}{Outcome-Based Placebo Tests, Cont'd}\label{}
+    \begin{itemize}
+        \item Parents choose neighborhoods based on their preferences and information set at the time of move
+        \begin{itemize}
+            \item Difficult to predict high-frequency differences that are realized 10 years later $\rightarrow$ hard to sort on this dimension
+        \end{itemize}
+        \item Key assumption: if unobservables $\theta_i$ correlated with exposure effect for cohort $s$, then correlated with exposure effects for surrounding cohorts $s'$ as well
+        $$Cov(\theta_i, m\Delta STEM_{od,s(i)}|X)>0 \Rightarrow Cov(\theta_i,m\Delta STEM_{od,s'}|X, m\Delta STEM_{od,s(i)})>0$$
+        \item Under this assumption, selection effects will be manifested in correlation with place effects for adjacent cohorts
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Exposure Effect Estimates Based on Cross-Cohort Variation}\label{}
+    \begin{table}[!htbp]
+	\centering \footnotesize
+	%\resizebox{0.95\textwidth}{!}{  % just to show it can be used}
+		\estwide{"tab/Tab_cohort.tex"}{4}{c}
+	\captionsetup{width=1.0\textwidth}
+\end{table}
+%Intuitively, what matters for a child’s outcome is a neighborhood’s quality for his own cohort, not the neighborhood’s quality for younger or older cohorts. In contrast, it is unlikely that other unobservables $\theta_i$ will vary sharply across birth cohorts $s$ in association with  $\Delta_{od}$ because the fluctuations across birth cohorts are realized only in adulthood and thus cannot be directly observed at the time of the move.
+\end{frame}
+
+\begin{frame}{Exposure Effect Estimates: Gender Specific Convergence}\label{}
+    \begin{table}[!htbp]
+	\centering \footnotesize
+	%\resizebox{0.95\textwidth}{!}{  % just to show it can be used}
+		\estwide{"tab/Tab_sex.tex"}{10}{c}
+	\captionsetup{width=1.0\textwidth}
+\end{table}
+population-weighted correlation of $\overbar{STEM}_p^m$ and $\overbar{STEM}_p^f$ across districts: 0.86
+%For instance, the unobservable $\theta$ does not vary differentially across children of different genders. The assumption requires that families who move to areas that are particularly good for boys do not systematically invest more in their sons relative to their daughters, a restriction that would hold if, for instance, families do not have different preferences over their sons’ and daughters’ outcomes. Under this assumption, the gender-specific convergence in proportion to exposure time must reflect causal place effects.
+\end{frame}
+
+\begin{frame}{Exposure Effect Estimates: Race/Eth. Specific Convergence}\label{}
+    \begin{table}[!htbp]
+	\centering \footnotesize
+	%\resizebox{0.95\textwidth}{!}{  % just to show it can be used}
+		\estwide{"tab/Tab_race.tex"}{4}{c}
+	\captionsetup{width=1.0\textwidth}
+\end{table}
+Black, Hispanic, and White
+\end{frame}
+
+\begin{frame}{Choice of Majors and Major Specific Exposure Effects}\label{tab_major_spec}
+    \begin{table}[!htbp]
+	\centering \footnotesize
+	%\resizebox{0.95\textwidth}{!}{  % just to show it can be used}
+		\estwide{"tab/Tab_BAorChoice.tex"}{4}{c}
+	\captionsetup{width=1.0\textwidth}
+\end{table}
+\hyperlink{tab_major_spec_narrow}{\beamerbutton{narrower}}
+%The idea underlying the research design is that genetic differences in inventive ability are unlikely to lead to differences in propensities to major in across specific college majors. For instance, a child is unlikely to have a gene that codes specifically for ability to invent in modulators rather than oscillators. Under this assumption, the degree of alignment between the specific technology classes in which children and their parents innovate can be used to estimate causal exposure effects.
+\end{frame}
+
+\begin{frame}{So Far}\label{}
+\begin{wideitemize}
+    \item Various refinements of the baseline design yield evidence of exposure effects rather than selection---hard to closely match the STEM rates of non-moving students by cohort, gender, race, and specific major
+    \item Conclude that my estimate of $\gamma$ $\simeq$ 0.04 is an unbiased estimate of the annual exposure effect on STEM choice. 
+    \item The convergence rate of 4\% implies that students moving at grade 0 would pick up about (13 - 0) $\times$ 4\% = 52\% of the observed difference in non-movers’ STEM rate between origin and destination.
+    \item Interpretation: moving in kindergarten from 25th percentile (0.0259) to 75th percentile (0.0539) of STEM rate-1.24 SD-would increase probability of majoring in STEM by 0.0280*4.0*13=1.4196 percentage points (35\% of the mean).
+    
+\end{wideitemize}
+
+\end{frame}
+
+\section{Occupation Composition in the Neighborhood}
+
+\begin{frame}{Occupation Composition in the Neighborhood}
+\begin{wideitemize}
+    \item Explore reasons for the college major choice convergence.
+    \item Neighborhood is the sum of various aspects of the place ($\overbar{STEM}_P$)
+    \begin{itemize}
+        \item Roughly divide it into school and non-school environments while those interacting
+        \item While the importance of school environments has been documented \begin{scriptsize} \textcolor{lightgray}{[Beilock et al. 2010; Clotfelter, Ladd, and Vigdor 2005; Lavy and Sand 2015; Legewie and DiPrete 2014; Wang 2013]}\end{scriptsize}, non-school environments have not received as much attention
+        \item One proxy for the non-school environment would be who lives in the place, occupations
+    \end{itemize} 
+\end{wideitemize}
+\end{frame}
+
+\begin{frame}{Occupation Composition in the Neighborhood, Cont'd}
+\begin{wideitemize}
+    \item How does the occupational composition of a neighborhood affect students' choice of major?
+    \begin{itemize}
+        \item Using Census Track level occupation data, we construct a measure of STEM occupation exposure. 
+        \item Following the ONET, we calculate Census track ($c$) level STEM proportion ($STEM_c$) as STEM workers/population. 
+        \item The school district ($p$) level STEM occupation exposure measure ($STEMOcc_p$) is defined as the average STEM proportion of Census tracks where schools ($s$) are located (and Census tracks near schools) weighted by the number of enrollments of students in each school.
+        $$STEMOcc_p = \sum_{s\in p} \left( \frac{Enroll_s}{\sum_{s\in p} Enroll_s}\times STEM_{c(s)} \right)$$
+    \end{itemize}
+\end{wideitemize}
+\end{frame}
+
+\begin{frame}{STEM Occupation Proportion Across Census Tracks}\label{map_stemOcc}
+    \begin{figure}[H]
+    \centering
+	\begin{subfigure}[t]{0.43\textwidth}
+        % Sub-caption
+        \centering
+    		\caption{STEM Occupation Proportion}
+    		\includegraphics[width=0.9\linewidth]{fig/map_stemOcc.png}
+	\end{subfigure}% 
+	\begin{subfigure}[t]{0.45\textwidth}
+	    % Sub-caption
+	    \centering
+    		\caption{STEM Occ. Proportion - Harris County}
+    		\includegraphics[width=0.9\linewidth]{fig/map_stemOcc_harris.png}
+	\end{subfigure}
+	\par\smallskip
+    \end{figure}
+Correlation: STEM Occ. rate with STEM rate: 0.78, with STEM rate among BA: 0.45 \hyperlink{map_stem_stemOcc}{\beamerbutton{map}}
+\end{frame}
+
+\begin{frame}{Exposure Effects in STEM Major Choice: STEM Occ.}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.5\linewidth]{fig/Semipara_STEM_lfit.png}
+%     \par\smallskip
+% \end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{fig/Semipara_STEMOcc_lfit_para.png}
+    \par\smallskip
+\end{figure}
+estimates of $b_m$ decline steadily with the grade at move $m$.
+\end{frame}
+
+\begin{frame}{Exposure Effects in STEM Major Choice: STEM Occ. Linear}\label{tab_STEMOcc}
+    \begin{table}[!htbp]
+	\centering \footnotesize
+	%\resizebox{0.95\textwidth}{!}{  % just to show it can be used}
+		\estwide{"tab/Tab_STEMOcc_diffSpec.tex"}{5}{c}
+	\captionsetup{width=1.0\textwidth}
+\end{table}
+\begin{itemize}
+    \item 1pp increase in STEM occ correlates 0.45pp increase in STEM major \hyperlink{STEM_major_occ}{\beamerbutton{STEM major and occ rates}}
+    % \begin{itemize}
+    %     \item 0.21*(100/45)=0.47$\approx$STEM major estimate
+    % \end{itemize}
+    \item Robust to definition to different size of attendance zone \hyperlink{tab_STEMOcc_robust}{\beamerbutton{robustness}}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exposure Effect Estimates: Gender Specific Convergence}\label{}
+    \begin{table}[!htbp]
+	\centering \footnotesize
+	%\resizebox{0.95\textwidth}{!}{  % just to show it can be used}
+		\estwide{"tab/Tab_sex_occ.tex"}{4}{c}
+	\captionsetup{width=1.0\textwidth}
+\end{table}
+%For instance, the unobservable $\theta$ does not vary differentially across children of different genders. The assumption requires that families who move to areas that are particularly good for boys do not systematically invest more in their sons relative to their daughters, a restriction that would hold if, for instance, families do not have different preferences over their sons’ and daughters’ outcomes. Under this assumption, the gender-specific convergence in proportion to exposure time must reflect causal place effects.
+\end{frame}
+
+\begin{frame}{School Environment $\rightarrow$ Occupational Composition?}
+\begin{wideitemize}
+    \item One would be concerned about the selection due to the good school environment attracting more involved parents 
+    \begin{itemize}
+        \item Difficult to think that good environments attract specific types of workers
+    \end{itemize} 
+    \item Assumption: if good school environments attract STEM parents, then they also attract parents in other profession
+
+    \item Under this assumption, selection effects will be manifested in correlation with place effects of other occupations.
+\end{wideitemize}
+    
+\end{frame}
+
+\begin{frame}{Children's Choice of Majors and Neighborhood Occ. Specific Exposure Effects}\label{}
+    \begin{table}[!htbp]
+	\centering \footnotesize
+	%\resizebox{0.95\textwidth}{!}{  % just to show it can be used}
+		\estwide{"tab/Tab_STEMocc_other_occ.tex"}{4}{c}
+	\captionsetup{width=1.0\textwidth}
+\end{table}
+%The idea underlying the research design is that genetic differences in inventive ability are unlikely to lead to differences in propensities to major in across specific college majors. For instance, a child is unlikely to have a gene that codes specifically for ability to invent in modulators rather than oscillators. Under this assumption, the degree of alignment between the specific technology classes in which children and their parents innovate can be used to estimate causal exposure effects.
+\end{frame}
+
+\begin{frame}{Heterogeneous Effects of Exposure}
+\begin{wideitemize}
+    \item Do high STEM neighborhoods help under-represented groups major in STEM too? 
+    \begin{itemize}
+        \item Women, Black and Hispanic, and economically disadvantaged students
+    \end{itemize} 
+    \item How much of the gap would be decreased if they have the same exposure?
+
+    \item We begin with economically disadvantaged status. 
+\end{wideitemize}
+\end{frame}
+
+\begin{frame}{Heterogeneous Exposure Effects by Economic Status}
+
+\begin{figure}[H]
+    \centering
+    		\includegraphics[width=0.7\linewidth]{fig/Semipara_STEM_lfit_econ.png}
+    \end{figure}
+Both groups have similar exposure effects but different selection effects.
+\end{frame}
+
+\begin{frame}{Heterogeneous Exposure Effects by Economic Status}
+\begin{wideitemize}
+    \item Since parents' occupation is unknown, one would expect the positive effects from exposure might be due to parents having STEM or possibly changing occupation to STEM when moving.
+    \item  However, convergence rates are similar regardless of economic background - benefits apply equally to students
+    \item The exposure effects are unlikely due to family effects.
+    \item However, non-disadvantaged students show larger positive selection effects - the choice of destination is more intentional for non-disadvantaged families.
+
+\end{wideitemize}
+\end{frame}
+
+\begin{frame}{Heterogeneous Exposure Effects by Gender}\label{hetero_sex}
+
+\begin{figure}[H]
+    \centering
+    		\includegraphics[width=0.65\linewidth]{fig/Semipara_STEM_lfit_sex.png}
+    \end{figure}
+\hyperlink{hetero_sex_engin}{\beamerbutton{engineering}}
+\end{frame}
+
+\begin{frame}{Heterogeneous Exposure Effects by Race/Ethnicity}
+
+\begin{figure}[H]
+    \centering
+    		\includegraphics[width=0.65\linewidth]{fig/Semipara_STEM_lfit_eth.png}
+    \end{figure}
+\end{frame}
+
+
+
+\begin{frame}{Heterogeneous Exposure Effects}\label{}
+    \begin{table}[!htbp]
+	\centering \footnotesize
+	%\resizebox{0.95\textwidth}{!}{  % just to show it can be used}
+		\estwide{"tab/Tab_hetero.tex"}{8}{c}
+	\captionsetup{width=1.0\textwidth}
+\end{table}
+Across different groups, we find similar exposure effects.
+% \begin{wideitemize}
+%     \item Men (0.0487) are 45\% more than women (0.0328)
+%     \begin{itemize}
+%         \item The same exposure rate as men in 13 years, women would increase the probability of majoring in STEM by (0.0487-0.0328)*13*3.9=0.806 percentage points, 50\% of the gap. 
+%     \end{itemize} 
+%     \item White (0.051) are 131\% more than Black (0.022) and 82\% more than Hispanic (0.028)
+%     \begin{itemize}
+%         \item The same exposure rate as White students in 13 years, Black students would increase the probability of majoring in STEM by (0.051-0.022)*13*2.6=0.98 percentage points, 34\% of the gap. 
+%         \item Hispanic students would increase the probability of majoring in STEM by (0.051-0.028)*13*2.3=0.69 percentage points, 30\% of the gap. 
+%     \end{itemize} 
+% \end{wideitemize}
+\end{frame}
+
+\begin{frame}{Counterfactual 1: Same STEM Neighborhood (District Level)}\label{counterfactual1}
+What if the average neighborhood STEM rates for underrepresented groups increas to match those of other groups?
+\begin{wideitemize}
+    \item The average neighborhood of White students (0.056) is 39\% higher than that of Black students (0.043) and 30\% more than Hispanic students (0.043)
+    \begin{itemize}
+        \item With the same neighborhood exposure rate as neighborhoods of White students in 13 years, Black students would increase the probability of majoring in STEM by (0.056-0.043)*13*4.0=0.68 percentage points, 21\% of the gap. 
+        \item Hispanic students would increase the probability of majoring in STEM by (0.056-0.043)*13*4.0=0.68 percentage points, 31\% of the gap. 
+    \end{itemize} 
+    \item The average neighborhood of not-disadvantaged students  (0.058) is 41\% higher than that of disadvantaged (0.041)
+    \begin{itemize}
+        \item The same neighborhood exposure rate as non-disadvantaged neighborhoods in 13 years, economically disadvantaged students would increase the probability of majoring in STEM by (0.058-0.041)*13*4.0=0.88 percentage points, 23\% of the gap.
+    \end{itemize}
+\end{wideitemize}
+\hyperlink{counterfactual1_occ}{\beamerbutton{STEM occupation}}
+\hyperlink{counterfactual1_campus}{\beamerbutton{Campus level}}
+\end{frame}
+
+
+\begin{frame}{Counterfactual 2: Same Gender Exposure}\label{counterfactual2}
+While male and female students may live in the same neighborhoods, the proportion of students pursuing STEM differs by gender, which is critical in light of the own gender convergence.
+What if the average neighborhood STEM rates for female students increased to match those of male students?
+\begin{wideitemize}
+    \item Average neighborhood male-to-male exposure (0.056) are 65\% more than women (0.034)
+    \begin{itemize}
+        \item The same exposure rate as men in 13 years, women would increase the probability of majoring in STEM by (0.056-0.034)*13*(2.5-1.0)=0.43 percentage points, 27\% of the gap. 
+    \end{itemize} 
+\end{wideitemize}
+\hyperlink{counterfactual2_occ}{\beamerbutton{STEM occupation}}
+\end{frame}
+
+
+% \begin{frame}{Heterogeneous Effects of Exposure: Counterfactual}
+% \begin{wideitemize}
+%     \item Men (0.0487) are 45\% more than women (0.0328)
+%     \begin{itemize}
+%         \item The same exposure rate as men in 13 years, women would increase the probability of majoring in STEM by (0.0487-0.0328)*13*3.9=0.806 percentage points, 50\% of the gap. 
+%     \end{itemize} 
+%     \item White (0.051) are 131\% more than Black (0.022) and 82\% more than Hispanic (0.028)
+%     \begin{itemize}
+%         \item The same exposure rate as White students in 13 years, Black students would increase the probability of majoring in STEM by (0.051-0.022)*13*2.6=0.98 percentage points, 34\% of the gap. 
+%         \item Hispanic students would increase the probability of majoring in STEM by (0.051-0.028)*13*2.3=0.69 percentage points, 30\% of the gap. 
+%     \end{itemize} 
+% \end{wideitemize}
+% \end{frame}
+
+\begin{frame}{Neighborhood Effects on Other Outcomes}
+\begin{wideitemize}
+    \item We also find similar exposure effects for other college majors and STEM enrollment 
+\end{wideitemize}
+\end{frame}
+
+\begin{frame}{Exposure Effects for Other Majors}
+\vspace{-0.8cm}
+\begin{figure}[H]
+    \centering
+	\begin{subfigure}[t]{0.33\textwidth}
+        % Sub-caption
+        \centering
+    		\caption{Engineering}
+    		\includegraphics[width=0.9\linewidth]{fig/Semipara_STEM_lfit_para_engin.png}
+	\end{subfigure}% 
+	\begin{subfigure}[t]{0.33\textwidth}
+	    % Sub-caption
+	    \centering
+    		\caption{Bio-science}
+    		\includegraphics[width=0.9\linewidth]{fig/Semipara_STEM_lfit_para_bio.png}
+	\end{subfigure}% 
+	\begin{subfigure}[t]{0.33\textwidth}
+	    % Sub-caption
+	    \centering
+    		\caption{Psychology}
+    		\includegraphics[width=0.9\linewidth]{fig/Semipara_STEM_lfit_para_psy.png}
+	\end{subfigure}
+	\par\smallskip
+        \begin{subfigure}[t]{0.33\textwidth}
+        % Sub-caption
+        \centering
+    		\caption{Liberal Arts}
+    		\includegraphics[width=0.9\linewidth]{fig/Semipara_STEM_lfit_para_libarts.png}
+	\end{subfigure}% 
+	\begin{subfigure}[t]{0.33\textwidth}
+	    % Sub-caption
+	    \centering
+    		\caption{Business}
+    		\includegraphics[width=0.9\linewidth]{fig/Semipara_STEM_lfit_para_biz.png}
+	\end{subfigure}% 
+	\begin{subfigure}[t]{0.33\textwidth}
+	    % Sub-caption
+	    \centering
+    		\caption{Health Profession}
+    		\includegraphics[width=0.9\linewidth]{fig/Semipara_STEM_lfit_para_health.png}
+	\end{subfigure}
+        \par\smallskip
+        \begin{subfigure}[t]{0.33\textwidth}
+        % Sub-caption
+        \centering
+    		\caption{Arts}
+    		\includegraphics[width=0.9\linewidth]{fig/Semipara_STEM_lfit_para_arts.png}
+	\end{subfigure}% 
+	\begin{subfigure}[t]{0.33\textwidth}
+	    % Sub-caption
+	    \centering
+    		\caption{Social Science}
+    		\includegraphics[width=0.9\linewidth]{fig/Semipara_STEM_lfit_para_soci.png}
+	\end{subfigure}% 
+    \end{figure}
+
+\end{frame}
+
+\begin{frame}{Exposure Effects for STEM Enrollment}
+
+\begin{figure}[H]
+    \centering
+    		\includegraphics[width=0.65\linewidth]{fig/Semipara_STEM_lfit_para_enroll_STEM.png}
+	
+    \end{figure}
+
+\end{frame}
+
+% \begin{frame}{Exposure Effects for BA}
+
+% \begin{figure}[H]
+%     \centering
+%     		\includegraphics[width=0.65\linewidth]{fig/Semipara_STEM_lfit_para_BA.png}
+	
+%     \end{figure}
+
+% \end{frame}
+
+% \begin{frame}{Exposure Effects for Earnings}\label{earnings}
+% \begin{figure}[H]
+%     \centering
+%     		\includegraphics[width=0.65\linewidth]{fig/Semipara_STEM_lfit_para_p_wage_WO_zero.png}
+	
+%     \end{figure}
+% \hyperlink{county_earnings}{\beamerbutton{county}}
+% \end{frame}
+
+\section{Conclusion}
+
+\begin{frame}{Takeaways}
+    \begin{wideitemize}
+        \item Neighborhoods shape students' choice of field of study as much as they impact their overall well-being.
+        \item Occupational composition of the area is the key driver influencing the neighborhood effects.
+        \item Underrepresented groups experience similar levels of exposure effects. If they had the same level of neighborhoods, about 20-40\% of the gaps would be reduced.
+    \end{wideitemize}
+\end{frame}
+
+\appendix
+
+\begin{frame}{\normal Mover's Outcomes Versus Predicted Outcomes Based on Permanent Residents in Destination}\label{symmetry}
+Nonparametric binned scatter plot corresponding to the regression for students moving at grade m = 3. 
+\vspace{-0.2cm}
+\begin{figure}[H]
+    \centering
+    		\includegraphics[width=0.4\linewidth]{fig/moverOutcomesVersusPredictedOutcomes.png}
+    \end{figure}
+\begin{itemize}
+    \item Moving to areas where permanent residents major in STEM more (or less) $\rightarrow$ more (or less) likely to major in STEM
+    \item But $b_m = \beta_m + \delta_m$, need to recover $\gamma_m$ by using estimates of $b_m$ for all $m$. 
+    \hyperlink{semi-para}{\beamerbutton{back}} 
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{\normal Mover's Outcomes Versus Predicted Outcomes Based on Permanent Residents in Destination-Parametric}\label{para}
+\begin{figure}[H]
+    \centering
+        % Sub-caption
+        \centering
+    		\includegraphics[width=0.5\linewidth]{fig/Semipara_STEM_lfit_para.png}
+	\par\smallskip
+    \end{figure}
+ \hyperlink{semi-para}{\beamerbutton{back}}
+\end{frame}
+
+\begin{frame}{\normal Mover's Outcomes Versus Predicted Outcomes Based on Permanent Residents in Destination-County}\label{county}
+
+\begin{figure}[H]
+    \centering
+        % Sub-caption
+        \centering
+    		\includegraphics[width=0.5\linewidth]{fig/Semipara_STEM_lfit_county.png}
+	\par\smallskip
+    \end{figure}
+ \hyperlink{semi-para}{\beamerbutton{back}}
+\end{frame}
+
+\begin{frame}{Exposure Effects Estimates Using Different Enrollment Cutoffs}\label{enrol_cutoff}
+
+\begin{figure}[H]
+    \centering
+        % Sub-caption
+        \centering
+    		\includegraphics[width=0.5\linewidth]{fig/enrollment_cutoff_sample.png}
+	\par\smallskip
+    \end{figure}
+ \hyperlink{tab_main}{\beamerbutton{back}} 
+\end{frame}
+
+\begin{frame}{Major Specific Exposure Effects: More Narrowly Defined}\label{tab_major_spec_narrow}
+    \begin{table}[!htbp]
+	\centering \footnotesize
+	%\resizebox{0.95\textwidth}{!}{  % just to show it can be used}
+		\estwide{"tab/Tab_BAorChoice_spec.tex"}{4}{c}
+	\captionsetup{width=1.0\textwidth}
+\end{table}
+\hyperlink{tab_major_spec}{\beamerbutton{back}}
+\end{frame}
+
+
+\begin{frame}{STEM Rate and STEM Occupation Rate}\label{map_stem_stemOcc}
+    \begin{figure}[H]
+    \centering
+	\begin{subfigure}[t]{0.43\textwidth}
+        % Sub-caption
+        \centering
+    		\caption{STEM rate}
+    		\includegraphics[width=0.9\linewidth]{fig/map_stem.png}
+	\end{subfigure}% 
+	\begin{subfigure}[t]{0.45\textwidth}
+	    % Sub-caption
+	    \centering
+    		\caption{STEM Occ. rate}
+    		\includegraphics[width=0.9\linewidth]{fig/map_stemOcc_district.png}
+	\end{subfigure}
+	\par\smallskip
+    \end{figure}
+Correlation: STEM Occ. rate with STEM rate: 0.8, with STEM rate among BA: 0.45  \hyperlink{map_stemOcc}{\beamerbutton{back}}
+\end{frame}
+
+\begin{frame}{Childhood Exposure Effects in STEM Major Choice: STEM Occ. Linear: Robust}\label{tab_STEMOcc_robust}
+    \begin{table}[!htbp]
+	\centering \footnotesize
+	%\resizebox{0.95\textwidth}{!}{  % just to show it can be used}
+		\estwide{"tab/Tab_STEMocc_robust.tex"}{7}{c}
+	\captionsetup{width=1.0\textwidth}
+\end{table}
+\hyperlink{tab_STEMOcc}{\beamerbutton{back}}
+%The idea underlying the research design is that genetic differences in inventive ability are unlikely to lead to differences in propensities to major in across specific college majors. For instance, a child is unlikely to have a gene that codes specifically for ability to invent in modulators rather than oscillators. Under this assumption, the degree of alignment between the specific technology classes in which children and their parents innovate can be used to estimate causal exposure effects.
+\end{frame}
+
+\begin{frame}{STEM Major Rate and STEM Occ Rate}\label{STEM_major_occ}
+\begin{figure}[H]
+    \centering
+    		\includegraphics[width=0.65\linewidth]{fig/STEM_major_occ.png}
+    \end{figure}
+\hyperlink{tab_STEMOcc}{\beamerbutton{back}}
+\end{frame}
+
+\begin{frame}{Exposure Effects for Earnings: County}\label{county_earnings}
+\begin{figure}[H]
+    \centering
+    		\includegraphics[width=0.65\linewidth]{fig/Semipara_STEM_lfit_para_p_wage_WO_zero_county.png}
+	
+    \end{figure}
+Chetty and Henrend 2018 estimate is 0.038
+\hyperlink{earnings}{\beamerbutton{back}}
+\end{frame}
+
+\begin{frame}{Heterogeneous Exposure Effects by Gender-Engineering}\label{hetero_sex_engin}
+\begin{figure}[H]
+    \centering
+    		\includegraphics[width=0.65\linewidth]{fig/Semipara_engin_lfit_sex.png}
+    \end{figure}
+\hyperlink{hetero_sex}{\beamerbutton{back}}
+\end{frame}
+
+\begin{frame}{Counterfactual 1: Same STEM Occupation Neighborhood}\label{counterfactual1_occ}
+What if the average neighborhood STEM occupation rates for underrepresented groups increase to match those of other groups?
+\begin{wideitemize}
+    \item The average neighborhood STEM occupations of White students (0.084) is 39\% higher than that of Black students (0.073) and 30\% more than Hispanic students (0.059)
+    \begin{itemize}
+        \item The same neighborhood exposure rate as White neighborhoods in 13 years, Black students would increase the probability of majoring in STEM by (0.084-0.073)*13*2.6=0.37 percentage points, 12\% of the gap. 
+        \item Hispanic students would increase the probability of majoring in STEM by (0.084-0.059)*13*2.6=0.85 percentage points, 39\% of the gap. 
+    \end{itemize}
+    \item The average neighborhood STEM occupations of not-disadvantaged students  (0.086) is 41\% higher than that of disadvantaged (0.061)
+    \begin{itemize}
+        \item The same neighborhood exposure rate as non-disadvantaged neighborhoods in 13 years, economically disadvantaged students would increase the probability of majoring in STEM by (0.086-0.061)*13*2.6=0.85 percentage points, 22\% of the gap.
+    \end{itemize}
+\end{wideitemize}
+\hyperlink{counterfactual1}{\beamerbutton{back}}
+\end{frame}
+
+\begin{frame}{Counterfactual 1: Same STEM Neighborhood (District Level)}\label{counterfactual1}
+
+\begin{wideitemize}
+   
+    \item The average neighborhood of not-disadvantaged students  (0.058) is 41\% higher than that of disadvantaged (0.041)
+    \begin{itemize}
+        \item The same neighborhood exposure rate as non-disadvantaged neighborhoods in 13 years, economically disadvantaged students would increase the probability of majoring in STEM by (0.058-0.041)*13*4.0=0.88 percentage points, 23\% of the gap.
+    \end{itemize}
+\end{wideitemize}
+\hyperlink{counterfactual1_occ}{\beamerbutton{STEM occupation}}
+\hyperlink{counterfactual1_campus}{\beamerbutton{Campus level}}
+\end{frame}
+
+
+\begin{frame}{Counterfactual 1: Same STEM Neighborhood (Campus Level)}\label{counterfactual1_campus}
+What if the average neighborhood STEM rates for underrepresented groups increased to match those of other groups?
+\begin{wideitemize}
+    \item The average neighborhood of White students (0.058) is 61\% higher than that of Black students (0.036) and 52\% more than Hispanic students (0.038)
+    \begin{itemize}
+        \item The same neighborhood exposure rate as White neighborhoods in 13 years, Black students would increase the probability of majoring in STEM by (0.058-0.036)*13*4.0=1.14 percentage points, 34\% of the gap. 
+        \item Hispanic students would increase the probability of majoring in STEM by (0.058-0.038)*13*4.0=1.04 percentage points, 44\% of the gap. 
+    \end{itemize} 
+    \item The average neighborhood of not-disadvantaged students  (0.060) is 71\% higher than that of disadvantaged (0.035)
+    \begin{itemize}
+        \item The same neighborhood exposure rate as non-disadvantaged neighborhoods in 13 years, economically disadvantaged students would increase the probability of majoring in STEM by (0.060-0.035)*13*4.0=1.3 percentage points, 34\% of the gap.
+    \end{itemize}
+\end{wideitemize}
+\hyperlink{counterfactual1}{\beamerbutton{back}}
+\end{frame}
+
+\begin{frame}{Counterfactual 2: Same Gender Exposure}\label{counterfactual2_occ}
+While male and female students may live in the same neighborhoods, the proportion of students pursuing STEM differs by gender, which is critical in light of the own gender convergence.
+What if the average neighborhood STEM occupation rates for female students increased to match those of male students?
+\begin{wideitemize}
+    \item Average neighborhood male-to-male exposure (0.082) are 28\% more than women (0.064)
+    \begin{itemize}
+        \item The same exposure rate as men in 13 years, women would increase the probability of majoring in STEM by (0.082-0.064)*13*(1.8-0.2)=0.37 percentage points, 23\% of the gap. 
+    \end{itemize} 
+\end{wideitemize}
+\hyperlink{counterfactual2}{\beamerbutton{back}}
+\end{frame}
+
+
+ \end{document}
+

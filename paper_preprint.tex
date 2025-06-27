@@ -1,0 +1,115 @@
+\documentclass[12pt,english]{article}
+\pdfoutput=1
+
+\input{fragment/preamble_citation}
+\input{fragment/preamble_package}
+\input{fragment/preamble_estout}
+\input{manuscript_title_etc}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% For appendix TOC
+\doparttoc % Tell to minitoc to generate a toc for the parts
+\faketableofcontents % Run a fake tableofcontents command for the partocs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Part I. Title and Abstract
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\droptitle}{-2em}
+\title{\PAPERTITLE
+}
+
+\author{
+\AUTHORKIM{},
+and \AUTHORMURPHY\thanks{
+\AUTHORKIMINFO;
+;
+\AUTHORMURPHYINFO.
+%\ACKNOWLEDGMENTS
+}}
+
+
+\date{\today}
+\maketitle
+
+
+%\centerline{\href{http://Jeonghyeok-Kim.github.io/assets/Neighborhood_effects_draft.pdf}{Click here for the latest version}}
+
+%\begin{abstract}
+%\singlespacing
+%\PAPERABSTRACT%\\
+%\textbf{Keywords}:\PAPERKEYWORDS
+%\end{abstract}
+%\thispagestyle{empty}
+%\clearpage
+
+% \doublespacing
+% \HIGHLIGHT
+\thispagestyle{empty}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Part II. Manuscript main text
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\renewcommand*{\thefootnote}{\arabic{footnote}}
+
+% Manuscript main text
+\begin{doublespacing}
+
+\input{manuscript_main}
+\end{doublespacing}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Part III. Bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\begingroup
+\setstretch{1.0}
+\setlength\bibitemsep{3pt}
+\printbibliography[title=References]
+\endgroup
+% \thispagestyle{empty}
+%\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Part IV. Tables and figures
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{singlespacing}
+\input{manuscript_tab_fig}
+\end{singlespacing}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PART V. Online Appendix
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\appendix
+% \setcounter{page}{1}
+% Title Page for Appendix
+% special footnote symbols
+\setlength{\footnotemargin}{5.0mm}
+\begingroup
+\doublespacing
+\centering
+\Large ONLINE APPENDIX \\
+\Large\begin{singlespace}{\PAPERTITLE}\end{singlespace}
+\large \AUTHORKIM \quad \AUTHORMURPHY \\[1.0em]
+\endgroup
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Appendix TOC
+\setcounter{page}{1}
+\addcontentsline{toc}{section}{Appendix} % Add the appendix text to the document TOC
+\textcolor{white}{\part{Appendix}} % Start the appendix part
+\vspace{-3cm}
+\parttoc % Insert the appendix TOC
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{doublespacing}
+% Results appendix
+\input{manuscript_online_appendix}
+\end{doublespacing}
+
+\end{document}
